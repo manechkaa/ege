@@ -1,0 +1,10 @@
+def solve(X, Y, n):
+    if X == 13 and Y == 12:
+        return 1
+    if X > 13 or Y > 12:
+        return 0
+    if X == Y or n >= 15:
+        return 0
+    return solve(X + 1, Y, n + 1) + solve(X, Y + 1, n + 1) + solve(X + 2, Y + 3, n + 1)
+
+print(solve(1, -1, 0))
