@@ -1,0 +1,8 @@
+def solve(X, Y):
+    if X == 7 and Y == 13:
+        return 1
+    if X > 7 or Y > 13:
+        return 0
+    return solve(X + 1, Y) + solve(X, Y + 1) + solve(X + 2, Y + 3)
+
+print(solve(0, 0))
