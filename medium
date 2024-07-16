@@ -1,0 +1,10 @@
+def solve(X, Y):
+    if X == 9 and Y == 19:
+        return 1
+    if X > 9 or Y > 19:
+        return 0
+    if X == 3 and Y == 5:
+        return 0
+    return solve(X + 1, Y) + solve(X, Y + 1) + solve(X + 2, Y + 3)
+
+print(solve(1, 2))
